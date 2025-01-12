@@ -22,4 +22,21 @@ export class PropertiesService {
         await queryRunner.release();
         return result;
     }
+
+    public async create(properties: Properties): Promise<Properties> {
+        const newProperties = await this.propertiesRepository.create(properties);
+        return await this.propertiesRepository.save(newProperties);
+    }
+
+    public async findById(id: number): Promise<Properties> {
+        return await this.propertiesRepository.findOne({ where: { id } });
+    }
+
+    public async update(properties: Properties): Promise<Properties> {
+        return await this.propertiesRepository.save(properties);
+    }
+
+    public async delete(id: number): Promise<void> {
+        await this.propertiesRepository.delete({ id });
+    }
 }

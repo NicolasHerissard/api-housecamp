@@ -29,6 +29,6 @@ export class Properties {
     @Column({ name: 'max_guests' })
     max_guests: number;
 
-    @Column({ name: 'created_at' })
+    @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
 }

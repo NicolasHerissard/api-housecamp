@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -18,5 +17,17 @@ export class UserService {
     public async create(user: User): Promise<User> {
         const newUser = await this.usersRepository.create(user);
         return this.usersRepository.save(newUser);
+    }
+
+    public async findById(id: number): Promise<User> {
+        return await this.usersRepository.findOne({ where: { id } });
+    }
+
+    public async update(user: User): Promise<User> {
+        return await this.usersRepository.save(user);
+    }
+
+    public async delete(id: number): Promise<void> {
+        await this.usersRepository.delete({ id });
     }
 }
