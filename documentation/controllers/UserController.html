@@ -142,10 +142,12 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Public</span>
                                 <a href="#create" >create</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
@@ -153,15 +155,18 @@
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Public</span>
                                 <a href="#findAll" >findAll</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Public</span>
                                 <a href="#findByEmail" >findByEmail</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
@@ -191,6 +196,7 @@
                     <a name="create"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Public</span>
                         <span ><b>create</b></span>
                         <a href="#create"><span class="icon ion-ios-link"></span></a>
@@ -208,14 +214,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;create&#x27;)<br /></code>
+                    <code>@Post(&#x27;create&#x27;)<br />@HttpCode(201)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="22"
-                                    class="link-to-prism">src/user/user.controller.ts:22</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="25"
+                                    class="link-to-prism">src/user/user.controller.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -268,6 +274,7 @@
                     <a name="delete"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Public</span>
                             <span class="modifier">Async</span>
                         <span ><b>delete</b></span>
@@ -286,14 +293,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Delete(&#x27;delete/:id&#x27;)<br /></code>
+                    <code>@Delete(&#x27;delete/:id&#x27;)<br />@HttpCode(204)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="38"
-                                    class="link-to-prism">src/user/user.controller.ts:38</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/user/user.controller.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -346,6 +353,7 @@
                     <a name="findAll"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Public</span>
                         <span ><b>findAll</b></span>
                         <a href="#findAll"><span class="icon ion-ios-link"></span></a>
@@ -363,14 +371,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get()<br /></code>
+                    <code>@Get()<br />@HttpCode(200)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="12"
-                                    class="link-to-prism">src/user/user.controller.ts:12</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="13"
+                                    class="link-to-prism">src/user/user.controller.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -393,6 +401,7 @@
                     <a name="findByEmail"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Public</span>
                         <span ><b>findByEmail</b></span>
                         <a href="#findByEmail"><span class="icon ion-ios-link"></span></a>
@@ -410,14 +419,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;:id&#x27;)<br /></code>
+                    <code>@Get(&#x27;:id&#x27;)<br />@HttpCode(200)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="17"
-                                    class="link-to-prism">src/user/user.controller.ts:17</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/user/user.controller.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -470,6 +479,7 @@
                     <a name="update"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Public</span>
                             <span class="modifier">Async</span>
                         <span ><b>update</b></span>
@@ -488,14 +498,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Put(&#x27;update/:id&#x27;)<br /></code>
+                    <code>@Put(&#x27;update/:id&#x27;)<br />@HttpCode(200)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="27"
-                                    class="link-to-prism">src/user/user.controller.ts:27</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/user/user.controller.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -557,7 +567,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, Delete, Get, HttpCode, NotFoundException, Param, Post, Put } from &#x27;@nestjs/common&#x27;;
 import { UserService } from &#x27;./user.service&#x27;;
 import { User } from &#x27;./user.entity&#x27;;
 
@@ -568,21 +578,25 @@ export class UserController {
     ) {}
 
     @Get()
+    @HttpCode(200)
     public findAll(): Promise&lt;User[]&gt; {
         return this.userService.findAll();
     }
 
     @Get(&#x27;:id&#x27;)
+    @HttpCode(200)
     public findByEmail(@Param(&#x27;id&#x27;) id: number): Promise&lt;User&gt; {
         return this.userService.findById(id);
     }
 
     @Post(&#x27;create&#x27;)
+    @HttpCode(201)
     public create(@Body() user: User): Promise&lt;User&gt; {
         return this.userService.create(user);
     }
 
     @Put(&#x27;update/:id&#x27;)
+    @HttpCode(200)
     public async update(@Param(&#x27;id&#x27;) id: number, @Body() user: User): Promise&lt;User&gt; {
         const existingUser &#x3D; await this.userService.findById(id);
         if(!existingUser) {
@@ -594,6 +608,7 @@ export class UserController {
     }
 
     @Delete(&#x27;delete/:id&#x27;)
+    @HttpCode(204)
     public async delete(@Param(&#x27;id&#x27;) id: number): Promise&lt;void&gt; {
         const existingUser &#x3D; await this.userService.findById(id);
         if(!existingUser) {

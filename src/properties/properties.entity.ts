@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Equipment } from 'src/equipments/equipment.entity';
+import { EquipmentsProperties } from 'src/equipmentsproperties/equipmentsproperties.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from 'typeorm';
 
 @Entity('properties')
 export class Properties {
@@ -31,4 +33,10 @@ export class Properties {
 
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
+
+    @ManyToMany(() => Equipment, equipment => equipment.properties)
+    equipments: Equipment[];
+
+    @ManyToMany(() => EquipmentsProperties, equipmentsProperties => equipmentsProperties.properties)
+    equipmentsProperties: EquipmentsProperties[];
 }

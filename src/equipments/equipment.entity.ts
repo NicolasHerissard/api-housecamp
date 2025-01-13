@@ -1,4 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { EquipmentsProperties } from 'src/equipmentsproperties/equipmentsproperties.entity';
+import { Properties } from 'src/properties/properties.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from 'typeorm';
 
 @Entity('equipments')
 export class Equipment {
@@ -8,4 +10,10 @@ export class Equipment {
 
     @Column()
     name: string;
+
+    @ManyToMany(() => Properties, properties => properties.equipments)
+    properties: Properties[];
+
+    @ManyToMany(() => EquipmentsProperties, equipmentsProperties => equipmentsProperties.equipment)
+    equipmentsProperties: EquipmentsProperties[];
 }

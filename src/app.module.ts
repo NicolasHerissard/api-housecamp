@@ -10,6 +10,7 @@ import { PropertiesModule } from './properties/properties.module';
 import { Properties } from './properties/properties.entity';
 import { EquipmentsModule } from './equipments/equipments.module';
 import { Equipment } from './equipments/equipment.entity';
+import { EquipmentspropertiesModule } from './equipmentsproperties/equipmentsproperties.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { Equipment } from './equipments/equipment.entity';
     UserModule,
     PropertiesModule,
     EquipmentsModule,
+    EquipmentspropertiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
