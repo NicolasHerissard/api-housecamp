@@ -8,6 +8,8 @@ import { User } from './user/user.entity';
 import { UserModule } from './user/user.module';
 import { PropertiesModule } from './properties/properties.module';
 import { Properties } from './properties/properties.entity';
+import { EquipmentsModule } from './equipments/equipments.module';
+import { Equipment } from './equipments/equipment.entity';
 
 @Module({
   imports: [
@@ -18,11 +20,12 @@ import { Properties } from './properties/properties.entity';
       username: 'admin',
       password: 'admin',
       database: 'housecamp',
-      entities: [User, Properties],
+      entities: [User, Properties, Equipment],
       synchronize: true,
     }),
     UserModule,
     PropertiesModule,
+    EquipmentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
