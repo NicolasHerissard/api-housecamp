@@ -34,7 +34,7 @@ export class Properties {
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
 
-    @ManyToMany(() => Equipment, equipment => equipment.properties)
+    @ManyToMany(() => Equipment, equipment => equipment.equipmentsProperties)
     equipments: Equipment[];
 
     @ManyToMany(() => EquipmentsProperties, equipmentsProperties => equipmentsProperties.properties)

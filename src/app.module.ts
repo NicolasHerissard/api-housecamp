@@ -11,6 +11,8 @@ import { Properties } from './properties/properties.entity';
 import { EquipmentsModule } from './equipments/equipments.module';
 import { Equipment } from './equipments/equipment.entity';
 import { EquipmentspropertiesModule } from './equipmentsproperties/equipmentsproperties.module';
+import { AuthModule } from './auth/auth.module';
+import { EquipmentsProperties } from './equipmentsproperties/equipmentsproperties.entity';
 
 @Module({
   imports: [
@@ -21,13 +23,14 @@ import { EquipmentspropertiesModule } from './equipmentsproperties/equipmentspro
       username: 'admin',
       password: 'admin',
       database: 'housecamp',
-      entities: [User, Properties, Equipment],
+      entities: [User, Properties, Equipment, EquipmentsProperties],
       synchronize: true,
     }),
     UserModule,
     PropertiesModule,
     EquipmentsModule,
     EquipmentspropertiesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
